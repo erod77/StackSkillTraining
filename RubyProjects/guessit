@@ -1,0 +1,16 @@
+puts "Welcome to the all knowing, all seeing computer gussing game. Can you guess what number I am thinking of?"
+x = rand(11)
+sleep 10
+puts "I'm thinking of a number between 0 and 10. Now try and think of what number that is."
+sleep 5
+puts "Do you have a number in mind?"
+sleep 2
+puts "OK lets hear it, type it in."
+guess = gets.chomp.to_i
+
+until guess == x
+  puts "Nope you ignorant DOPE. Try again!"
+  guess = gets.chomp.to_i
+end
+
+puts "That's right! I was thinking of #{x}"
