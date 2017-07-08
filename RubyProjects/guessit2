@@ -1,0 +1,25 @@
+print "Welcome to the all knowing, all seeing computer gussing game. Can you guess what number I am thinking of?\n"
+x = rand(11)
+sleep 10
+
+print "I'm thinking of a number between 0 and 10. Now try and think of what number that is.\n"
+sleep 5
+
+print "Do you have a number in mind?\n"
+sleep 2
+
+puts "OK lets hear it, type it in."
+sleep 2
+guess = gets.chomp.to_i
+# x = rand(11)
+if guess == x
+  puts "Great guess I was thinking of #{x} too"
+else
+  puts "NOPE you ignorant DOPE. Try again!"
+  guess = gets.chomp.to_i
+  until guess == x
+    puts "NOPE you ignorant DOPE. Try again"
+    guess = gets.chomp.to_i
+  end
+end
+puts "That's right! I was thinking of #{x}"
